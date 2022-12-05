@@ -9,8 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define MAIN     0
-#define NUM      1
-#define CODE     2
+#define WIN      1
+#define NUM      2
+#define CODE     3
 
 &mt {
     tapping-term-ms = <300>;
@@ -25,7 +26,7 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | GUI  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT(|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT)|
-//                    | GUI | NUM | SPC |   | ENT | CODE | ALT |
+//                    | ALT | NUM | SPC |   | ENT | CODE | ALT |
                         bindings = <
    &kp TAB        &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LGUI       &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -33,7 +34,20 @@
                   &kp LALT &mo NUM &kp SPACE      &kp RET &mo CODE &kp RCTRL
                         >;
                 };
-                lower_layer {
+                win_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT(|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT)|
+//                    | ALT | NUM | SPC |   | ENT | CODE | ALT |
+                        bindings = <
+   &kp TAB        &kp Q &kp W &kp E &kp R &kp T   &kp Y   &kp U    &kp I     &kp O   &kp P    &kp BSPC
+   &kp LGUI       &kp A &kp S &kp D &kp F &kp G   &kp H   &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+   &mt LSHFT LPAR &kp Z &kp X &kp C &kp V &kp B   &kp N   &kp M    &kp COMMA &kp DOT &kp FSLH &mt RSHFT RPAR
+                  &kp LALT &mo NUM &kp SPACE      &kp RET &mo CODE &kp RCTRL
+                        >;
+                };
+                num_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |     |  F1 |  F2 |  F3 |  F4 |   |  1  |  2  |  3  |     |     |       |
 // |      |     |  F5 |  F6 |  F7 |  F8 |   |  4  |  5  |  6  |     |     |       |
@@ -41,13 +55,13 @@
 //                    |     |     | SPC |   | ENT |     | RCTL|
                         bindings = <
    &kp ESC &trans &kp F1       &kp F2       &kp F3      &kp F4        &kp N1   &kp N2   &kp N3  &trans &trans     &trans
-   &trans  &trans &kp F5       &kp F6       &kp F7      &kp F8        &kp N4   &kp N5   &kp N6  &trans &trans     &trans
+   &trans  &trans &kp F5       &kp F6       &kp F7      &kp F8        &kp N4   &kp N5   &kp N6  &trans &trans     &tog WIN
    &trans  &trans &kp F9       &kp F10      &kp F11     &kp F12       &kp N7   &kp N8   &kp N9  &kp N0 &trans     &bt BT_CLR 
                                &trans       &trans      &kp SPACE     &kp RET  &trans   &kp RCTRL
                         >;
                 };
 
-                raise_layer {
+                code_layer {
 // -----------------------------------------------------------------------------------------
 // | TAB  |HOME |  UP | END | PGUP| BT0 |   |  {  |  }  |  -  |  =  | INS | DEL  |
 // |      |LEFT |DOWN |RIGHT| PGDN| BT1 |   |  [  |  ]  |  _  |  +  |  \  |  `   |
