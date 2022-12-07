@@ -59,7 +59,7 @@
                         bindings = <
    &kp ESC &trans &kp F1       &kp F2       &kp F3      &kp F4        &kp MINUS &kp N1   &kp N2   &kp N3  &trans   &trans
    &trans  &trans &kp F5       &kp F6       &kp F7      &kp F8        &kp PLUS  &kp N4   &kp N5   &kp N6  &trans   &tog WIN
-   &trans  &trans &kp F9       &kp F10      &kp F11     &kp F12       &kp N0    &kp N7   &kp N8   &kp N9  &trans   &bt BT_CLR 
+   &trans  &trans &kp F9       &kp F10      &kp F11     &kp F12       &kp N0    &kp N7   &kp N8   &kp N9  &trans   &trans 
                                &trans       &trans      &kp SPACE     &kp RET  &trans   &kp RCTRL
                         >;
                 };
@@ -72,10 +72,10 @@
 // |      |     |     |     |     | BT2 |   |  (  |  )  |     |     | "|" |  ~   |
 //                    | ALT |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB  &kp HOME   &kp UP     &kp END         &kp PG_UP   &bt BT_SEL 0    &kp LBRC    &kp RBRC    &kp MINUS  &kp EQUAL &trans   &trans
-   &trans   &kp LEFT   &kp DOWN   &kp RIGHT       &kp PG_DN   &bt BT_SEL 1    &kp LBKT    &kp RBKT    &kp UNDER  &kp PLUS  &kp BSLH &kp GRAVE
-   &trans   &trans     &trans     &trans          &trans      &bt BT_SEL 2    &kp LPAR    &kp RPAR    &kp INS    &kp DEL   &kp PIPE &kp TILDE
-                    	          &kp LALT        &trans      &kp SPACE       &kp RET     &trans      &kp RALT
+   &kp TAB  &kp HOME   &kp UP     &kp END         &kp PG_UP   &bt BT_PRV    &kp LBRC    &kp RBRC    &kp MINUS  &kp EQUAL &trans   &trans
+   &trans   &kp LEFT   &kp DOWN   &kp RIGHT       &kp PG_DN   &bt BT_NXT    &kp LBKT    &kp RBKT    &kp UNDER  &kp PLUS  &kp BSLH &kp GRAVE
+   &trans   &trans     &trans     &trans          &trans      &bt BT_CLR    &kp LPAR    &kp RPAR    &kp INS    &kp DEL   &kp PIPE &kp TILDE
+                    	          &kp LALT        &trans      &kp SPACE     &kp RET     &trans      &kp RALT
                         >;
                 };
         };
