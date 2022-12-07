@@ -14,7 +14,7 @@
 #define CODE     3
 
 &mt {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <400>;
 };
 
 / {
@@ -29,10 +29,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT | 
 //                    | ALT | NUM | SPC |   | ENT | CODE | ALT |
                         bindings = <
-   &kp TAB    &kp Q &kp W &kp E &kp R &kp T       &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LGUI   &kp A &kp S &kp D &kp F &kp G       &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT  &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT 
-                  &kp LALT &mo NUM &kp SPACE      &kp RET &mo CODE &kp RCTRL
+   &kp TAB         &kp Q &kp W &kp E &kp R &kp T       &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LGUI        &kp A &kp S &kp D &kp F &kp G       &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &mt LSHFT LPAR  &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RPAR
+                   &kp LALT &mo NUM &kp SPACE          &kp RET &mo CODE &kp RCTRL
                         >;
                 };
                 win_layer {
@@ -57,9 +57,9 @@
 // |      |     |  F9 |  F10|  F11|  F12|   |  7  |  8  |  9  |  0  |     | BTCLR |
 //                    |     |     | SPC |   | ENT |     | RCTL|
                         bindings = <
-   &kp ESC &trans &kp F1       &kp F2       &kp F3      &kp F4        &trans &kp N1   &kp N2   &kp N3  &trans   &trans
-   &trans  &trans &kp F5       &kp F6       &kp F7      &kp F8        &trans &kp N4   &kp N5   &kp N6  &trans   &tog WIN
-   &trans  &trans &kp F9       &kp F10      &kp F11     &kp F12       &kp N0 &kp N7   &kp N8   &kp N9  &trans   &bt BT_CLR 
+   &kp ESC &trans &kp F1       &kp F2       &kp F3      &kp F4        &kp MINUS &kp N1   &kp N2   &kp N3  &trans   &trans
+   &trans  &trans &kp F5       &kp F6       &kp F7      &kp F8        &kp PLUS  &kp N4   &kp N5   &kp N6  &trans   &tog WIN
+   &trans  &trans &kp F9       &kp F10      &kp F11     &kp F12       &kp N0    &kp N7   &kp N8   &kp N9  &trans   &bt BT_CLR 
                                &trans       &trans      &kp SPACE     &kp RET  &trans   &kp RCTRL
                         >;
                 };
@@ -72,9 +72,9 @@
 // |      |     |     |     |     | BT2 |   |  (  |  )  |     |     | "|" |  ~   |
 //                    | ALT |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB  &kp HOME   &kp UP     &kp END         &kp PG_UP   &bt BT_SEL 0    &kp LBRC    &kp RBRC    &kp MINUS &kp EQUAL &kp INS  &kp DEL
-   &trans   &kp LEFT   &kp DOWN   &kp RIGHT       &kp PG_DN   &bt BT_SEL 1    &kp LBKT    &kp RBKT    &kp UNDER &kp PLUS  &kp BSLH &kp GRAVE
-   &trans   &trans     &trans     &trans          &trans      &bt BT_SEL 2    &kp LPAR    &kp RPAR    &trans    &trans    &kp PIPE &kp TILDE
+   &kp TAB  &kp HOME   &kp UP     &kp END         &kp PG_UP   &bt BT_SEL 0    &kp LBRC    &kp RBRC    &kp MINUS  &kp EQUAL &trans   &trans
+   &trans   &kp LEFT   &kp DOWN   &kp RIGHT       &kp PG_DN   &bt BT_SEL 1    &kp LBKT    &kp RBKT    &kp UNDER  &kp PLUS  &kp BSLH &kp GRAVE
+   &trans   &trans     &trans     &trans          &trans      &bt BT_SEL 2    &kp LPAR    &kp RPAR    &kp INS    &kp DEL   &kp PIPE &kp TILDE
                     	          &kp LALT        &trans      &kp SPACE       &kp RET     &trans      &kp RALT
                         >;
                 };
