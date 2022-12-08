@@ -67,14 +67,14 @@
                 code_layer {
                 label = "CODE";
 // -----------------------------------------------------------------------------------------
-// | TAB  |HOME |  UP | END | PGUP| BT0 |   |  {  |  }  |  -  |  =  | INS | DEL  |
+// | TAB  |HOME |  UP | END | PGUP| BT0 |   |  {  |  }  |  -  |  =  |     |      |
 // |      |LEFT |DOWN |RIGHT| PGDN| BT1 |   |  [  |  ]  |  _  |  +  |  \  |  `   |
-// |      |     |     |     |     | BT2 |   |  (  |  )  |     |     | "|" |  ~   |
+// |      |     |     | INS | DEL | BT2 |   |  (  |  )  |     |     | "|" |  ~   |
 //                    | ALT |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB  &kp HOME   &kp UP     &kp END         &kp PG_UP   &bt BT_PRV    &kp LBRC    &kp RBRC    &kp MINUS  &kp EQUAL &trans   &trans
    &trans   &kp LEFT   &kp DOWN   &kp RIGHT       &kp PG_DN   &bt BT_NXT    &kp LBKT    &kp RBKT    &kp UNDER  &kp PLUS  &kp BSLH &kp GRAVE
-   &trans   &trans     &trans     &trans          &trans      &bt BT_CLR    &kp LPAR    &kp RPAR    &kp INS    &kp DEL   &kp PIPE &kp TILDE
+   &trans   &trans     &trans     &kp INS         &kp DEL     &bt BT_CLR    &kp LPAR    &kp RPAR    &trans     &trans    &kp PIPE &kp TILDE
                     	          &kp LALT        &trans      &kp SPACE     &kp RET     &trans      &kp RALT
                         >;
                 };
